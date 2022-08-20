@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            screens:{
+                sm: '480px',
+                md: '768px',
+                lg: '1024px',
+                xl: '1256px'
+            },
+            extend: {
+              colors: {
+                ui01: '#008060',
+                btnHover: '#004c3f',
+                section01Bg: '#fbf7ed',
+                section02Bg: '#004c3f',
+                section04Bg: '#f3fcf4',
+                section06Bg: '#002e25',
+                section07Bg: '#fbf7ed',
+                footerBg: '#002e25',
+                clifford: '#da373d',
+              }
+            }
+          },
+          variants: {
+            extend: {
+                display: ['group-focus']
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+    <!-- NavBar -->
+    <nav class="flex sticky top-0 shadow-lg justify-between items-center bg-section01Bg px-10 md:px-20 py-1">
+        <!-- Left NavBar -->
+        <div class="flex items-center justify-center ">
+            <!-- logo -->
+            <div>
+                <img src="./assets/logo.png" width="125px">
+            </div>
+    
+            <!-- Menu Left Container-->
+            <div class="hidden gap-1 ml-4 xl:flex">
+
+                <div class="flex flex-col items-start  ml-2">
+                    <button  class="flex justify-center  items-center text-[17px] font-semibold text-[#42474c] w-30 p-2">
+                        Start 
+                        <span>
+                            <img src="./assets/down.svg" >
+                        </span>
+                    </button>
+                </div>
+
+                <div class="flex flex-col items-start  ml-2">
+                    <button  class="flex justify-center  items-center text-[17px] font-semibold text-[#42474c] w-30 p-2">
+                        Sell 
+                        <span>
+                            <img src="./assets/down.svg" >
+                        </span>
+                    </button>
+                </div>
+
+                <div class="flex flex-col items-start  ml-2">
+                    <button  class="flex justify-center  items-center text-[17px] font-semibold text-[#42474c] w-30 p-2">
+                        Market 
+                        <span>
+                            <img src="./assets/down.svg" >
+                        </span>
+                    </button>
+                </div>
+
+                <div class="flex flex-col items-start  ml-2">
+                    <button  class="flex justify-center  items-center text-[17px] font-semibold text-[#42474c] w-30 p-2">
+                        Manage 
+                        <span>
+                            <img src="./assets/down.svg" >
+                        </span>
+                    </button>
+                </div>
+
+                
+            </div>
+            
+        </div>
+        
+
+        <!-- Right NavBar -->
+        <div class="flex justify-center items-center">
+
+            <!-- Menu Left Container-->
+            <div class="hidden gap-1 mr-4 xl:flex">
+
+                <div class="flex flex-col items-start  ml-2">
+                    <button  class="flex justify-center  items-center text-[17px] font-semibold text-[#42474c] w-30 p-2">
+                        Pricing 
+                    </button>
+                </div>
+
+                <div class="flex flex-col items-start  ml-2">
+                    <button  class="flex justify-center  items-center text-[17px] font-semibold text-[#42474c] w-30 p-2">
+                        Learn 
+                        <span>
+                            <img src="./assets/down.svg" >
+                        </span>
+                    </button>
+                </div>
+
+                <div class="flex flex-col items-start  ml-2">
+                    <button  class="flex justify-center  items-center text-[17px] font-semibold text-[#42474c] w-30 p-2">
+                        Log in 
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mennu btn -->
+            <div class="hidden xl:flex">
+                <a class="text-white font-bold shadow text-lg bg-ui01 px-4 py-2 rounded" href="">
+                    Try for free
+                </a>
+            </div>
+
+            <!-- for small screen -->
+            <div class="flex justify-center items-center gap-2 xl:hidden">
+                <div class="flex flex-col items-start  ml-2">
+                    <button  class="flex justify-center  items-center text-[20px] font-semibolds text-[#42474c] w-30 p-2">
+                        Log in 
+                    </button>
+                </div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7  w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CTA Section -->
+    <main class="flex flex-col bg-section01Bg lg:flex-row">
+
+        <!-- CTA -->
+        <div class="flex flex-col justify-center p-20 items-start lg:w-1/2">
+
+            <h1 class="text-5xl text-[#004c3f] font-bold leading-[1.4] text-left">
+                The easiest way to sell online in India
+            </h1>
+
+            <h2 class="mt-6 md:mt-12 text-xl text-[#004c3f]">
+                Try one of the most powerful platforms on the market for free. No technical knowledge needed.
+            </h2>
+
+            
+
+            <div class="mt-4 md:mt-8 flex">
+                <input class="px-8 pl-4 py-2 mr-4 text-left w-72 rounded border-[1px] border-[#004c3f]"
+                type="email" placeholder="Enter your email address">
+
+                <a class="text-white text-center font-bold shadow text-lg bg-ui01 px-4 py-2 rounded" href="">
+                    Try for free
+                </a>
+            </div>
+
+            <p class="mt-4 md:mt-6 text-sm text-[#004c3f]">
+                Try Shopify free for 14 days, no credit card required. By entering your email, you agree to receive marketing emails from Shopify.
+            </p>
+
+        </div>
+
+        <!-- Image -->
+        <div class="flex justify-center lg:w-1/2">
+            <img src="https://cdn.shopify.com/shopifycloud/brochure/assets/home/hero/in-hero-product-small-0c64c4c1013fc8ac477cb5ff62bf5b56b2903aec697e6b708b90d3b65a09baf8.jpg">
+        </div>
+    </main>
+
+    <!-- Ecommerce Section -->
+    <section class="flex flex-col py-12 items-start bg-section02Bg px-10 lg:px-20">
+        
+        <!-- Part 01 -->
+        <div>
+            <!-- heading -->
+            <div class="flex flex-col  items-start">
+
+                <h1 class="text-left text-4xl text-white">
+                    Bring your business online
+                </h1>
+
+                <p class="mt-6 text-left text-white">
+                    Create an ecommerce website backed by powerful tools that help you find customers, drive sales, and manage your day-to-day.
+                </p>
+
+                <a class="mt-4 flex h-full items-center text-left text-white font-bold" href="">
+                    Explore more examples  
+                    <img class="ml-2" src="./assets/right-chevron.png" width="20px">
+                </a>
+
+                
+            </div>
+
+            <!-- cards container -->
+            <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                <!-- card -01 -->
+                <div class="mt-6 ">
+                    <div class="rounded shadow-lg">
+                        <img class="rounded" src="https://cdn.shopify.com/shopifycloud/brochure/assets/merchants/blue-tokai/home-example-small-4144844351e226a9896cffee4bebdaeecb17897116c33a753bfd086b8b621e74.jpg" >
+                    </div>
+                    
+                    <div class="px-1 mt-4">
+                        <a href="#" class=" text-white text-sm font-semibold">
+                            FOOD & DRINK
+                        </a>
+        
+                        <p class="mt-[1px] text-white text-xl font-normal">
+                            Blue Tokai
+                        </p>
+                    </div>
+                </div>
+
+                <!-- card -02 -->
+                <div class="mt-6 ">
+                    <div class="rounded shadow-lg">
+                        <img class="rounded" src="https://cdn.shopify.com/shopifycloud/brochure/assets/merchants/quirksmith/home-example-small-8b1c6b138414b76150e6e00f5143c4301a07b708aa6113dd7096f4340ddfecad.jpg" >
+                    </div>
+                    
+                    <div class="px-1 mt-4">
+                        <a href="#" class=" text-white text-sm font-semibold">
+                            JEWELRY
+                        </a>
+        
+                        <p class="mt-[1px] text-white text-xl font-normal">
+                            Quirksmith
+                        </p>
+                    </div>
+                </div>
+
+                <!-- card -03 -->
+                <div class="mt-6 ">
+                    <div class="rounded shadow-lg">
+                        <img class="rounded" src="https://cdn.shopify.com/shopifycloud/brochure/assets/merchants/crossbeats/home-example-small-099933088cbe804543fbb1b0963a5d0a16365e73e6000949b5b0ab2bf4b21503.jpg" >
+                    </div>
+                    
+                    <div class="px-1 mt-4">
+                        <a href="#" class=" text-white text-sm font-semibold">
+                            ELECTRONICS
+                        </a>
+        
+                        <p class="mt-[1px] text-white text-xl font-normal">
+                            Crossbeats
+                        </p>
+                    </div>
+                </div>
+
+                <!-- card -04 -->
+                <div class="mt-6 hidden md:block">
+                    <div class="rounded shadow-lg">
+                        <img class="rounded" src="https://cdn.shopify.com/shopifycloud/brochure/assets/merchants/mcaffeine/home-example-small-26afc247af7a3a7b1c9c585a645ccdff26e76156e98be7d9ff0fe9ecd4d3b675.jpg" >
+                    </div>
+                    
+                    <div class="px-1 mt-4">
+                        <a href="#" class=" text-white text-sm font-semibold">
+                            BEAUTY
+                        </a>
+        
+                        <p class="mt-[1px] text-white text-xl font-normal">
+                            Mcaffeine
+                        </p>
+                    </div>
+                </div>
+
+                <!-- card -05 -->
+                <div class="mt-6 hidden lg:block">
+                    <div class="rounded shadow-lg">
+                        <img class="rounded" src="https://cdn.shopify.com/shopifycloud/brochure/assets/merchants/bunaai/home-example-small-4575b175c798e22af5531bae02621396add507433f771db37b1515e9941f8a45.jpg" >
+                    </div>
+                    
+                    <div class="px-1 mt-4">
+                        <a href="#" class=" text-white text-sm font-semibold">
+                            FASHION
+                        </a>
+        
+                        <p class="mt-[1px] text-white text-xl font-normal">
+                            Bunaai
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Part 02 -->
+        <div class="mt-20 py-16">
+            <!-- heading -->
+            <div>
+                <h1 class="text-white text-3xl">
+                    Take the best path forward
+                </h1>
+            </div>
+
+            <!-- item container -->
+            <div class="mt-14 grid grid-cols-4 gap-6">
+                <!-- item 01-->
+                <div class="px-4 py-2">
+                    <img src="./assets/icon01.png" width="42px">
+
+                    <h2 class="mt-4 text-white text-xl font-semibold">
+                        Start an online business
+                    </h2>
+
+                    <p class="mt-2 text-white text-md">
+                        Create a business, whether you’ve got a fresh idea or are looking for a new way to make money.
+                    </p>
+                </div>
+
+                <!-- item 02-->
+                <div class="px-4 py-2">
+                    <img src="./assets/icon02.png" width="42px">
+
+                    <h2 class="mt-4 text-white text-xl font-semibold">
+                        Move your business online
+                    </h2>
+
+                    <p class="mt-2 text-white text-md">
+                        Turn your retail store into an online store and keep serving customers without missing a beat.
+                    </p>
+                </div>
+
+                <!-- item 03-->
+                <div class="px-4 py-2">
+                    <img src="./assets/icon03.png" width="42px">
+
+                    <h2 class="mt-4 text-white text-xl font-semibold">
+                        Switch to Shopify
+                    </h2>
+
+                    <p class="mt-2 text-white text-md">
+                        Bring your business to Shopify, no matter which ecommerce platform you’re currently using.
+                    </p>
+                </div>
+
+                <!-- item 04-->
+                <div class="px-4 py-2">
+                    <img src="./assets/icon04.png" width="42px">
+
+                    <h2 class="mt-4 text-white text-xl font-semibold">
+                        Hire a Shopify expert
+                    </h2>
+
+                    <p class="mt-2 text-white text-md">
+                        Get set up with the help of a trusted freelancer or agency from the Shopify Experts Marketplace.
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+        
+    </section>
+
+    <!--  -->
+</body>
+</html>
